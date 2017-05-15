@@ -1,4 +1,5 @@
-div {
+.div-control {
+	text-align: left;
 	color: white;
 	position: relative;
 	padding: 10px;
@@ -20,21 +21,21 @@ div {
 
 .div-title {
 	position: absolute;
+	left: 0;
+	top: 10px;
 	background-color: rgba(0, 0, 0, 0.74);
 	z-index: 1;
 	padding: 10px;
-	float: left;
 }
 
 .div-footer {
+	border: none;
 	position: absolute;
-	height: 30px;
-	background-color: rgba(0, 0, 0, 0.74);
+	height: 40%;
 	z-index: 1;
-	bottom: 7.7px;
-	padding: 10px;
-	left: 10px;
-	right: 10px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
 
 .home-div {
@@ -76,6 +77,53 @@ div {
 	float: right;
 }
 
+.gradient {
+	width: 100%;
+	height: 100%;
+}
+
+.game-info {
+	position: absolute;
+	height: 30%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.game-data {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+.tag {
+	background-color: #d6061e;
+	padding: 5px;
+}
+
+.play {
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+}
+
+.stand-cover {
+	position: absolute;
+	top: 55px;
+	left: 20px;
+	width: 23%;
+	height: 65%;
+	min-width: 120px;
+}
+
+.lying-cover {
+	position: absolute;
+	top: 65px;
+	left: 20px;
+	width: 40%;
+	height: 50%;
+}
+
 @media (max-width:1350px) {
 	.home-div {
 		width: 55%;
@@ -109,4 +157,65 @@ div {
 		display: inline-block;
 		float: none;
 	}
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.hexagon-small {
+  color: black;
+  position: relative;
+  width: 50px; 
+  height: 28.87px;
+  background-color: #d6061e;
+  margin: 14.43px 0;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+  text-align: center;
+  font-size: 25px;
+}
+
+.hexagon-small:hover {
+	cursor: pointer;
+}
+
+.hexagon-small:active {
+	background-color: #a3041a;
+}
+
+.hexagon-small:before,
+.hexagon-small:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 35.36px;
+  height: 35.36px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 7.3223px;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+}
+
+.hexagon-small:before {
+  top: -17.6777px;
+}
+
+.hexagon-small:after {
+  bottom: -17.6777px;
+}
+
+.icon-play {
+	margin-left: 2.5px;
+	background: none !important;
+}
+
+/*cover up extra shadows*/
+.hexagon-small span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:50px;
+  height:28.8675px;
+  z-index: 2;
 }

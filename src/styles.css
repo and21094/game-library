@@ -43,6 +43,10 @@ body{
     cursor: pointer;
 }
 
+.inline {
+  display: inline-block;
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 [class^="icon-"], [class*=" icon-"] {
@@ -65,6 +69,9 @@ body{
 }
 .icon-home:before {
   content: "\e900";
+}
+.icon-file:before {
+  content: "\e926";
 }
 .icon-folder-open:before {
   content: "\e930";
