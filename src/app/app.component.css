@@ -85,12 +85,20 @@
 }
 
 .container {
+  padding: 15px;
+  overflow-y: auto;
   position: absolute;
-  background: rgba(95, 95, 95, 0.45);
+  /*background: rgba(95, 95, 95, 0.45);*/
   min-width: 785px;
   min-height: 580px;
   top: 20px;
   left: 15px;
   right: 15px;
   bottom: 20px;
+}
+
+@media (max-width:1350px) {
+  .container {
+    text-align: center;
+  }
 }
