@@ -1,6 +1,5 @@
 .div-control {
 	text-align: left;
-	color: white;
 	position: relative;
 	padding: 10px;
 }
@@ -8,15 +7,11 @@
 .banner {
 	width: 100%;
 	height: 100%;
-	/*filter:brightness(50%);*/
-	/*filter:blur(1px);*/
-	/*filter:contrast(50%);*/
 }
 
 .carousel {
 	padding: 0;
 	height: 100%;
-	background-color: red;
 }
 
 .div-title {
@@ -45,6 +40,14 @@
 	display: inline-block;
 	margin-right: 15px;
 	float: left;
+}
+
+.star {
+	cursor: pointer;
+	color: yellow;
+	position: absolute;
+	right: 10px;
+	top: 6px;
 }
 
 .home-small-div {
@@ -99,6 +102,7 @@
 .tag {
 	background-color: #d6061e;
 	padding: 5px;
+	color: black;
 }
 
 .play {
@@ -113,7 +117,7 @@
 	left: 20px;
 	width: 23%;
 	height: 65%;
-	min-width: 120px;
+	min-width: 175px;
 }
 
 .lying-cover {
@@ -124,7 +128,18 @@
 	height: 50%;
 }
 
+.square-cover {
+	position: absolute;
+	top: 65px;
+	left: 20px;
+	width: 35%;
+	height: 50%;
+}
+
 @media (max-width:1350px) {
+	.stand-cover {
+		min-width: 120px;
+	}
 	.home-div {
 		width: 55%;
 		height: 45%;
@@ -157,65 +172,4 @@
 		display: inline-block;
 		float: none;
 	}
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-.hexagon-small {
-  color: black;
-  position: relative;
-  width: 50px; 
-  height: 28.87px;
-  background-color: #d6061e;
-  margin: 14.43px 0;
-  box-shadow: 0 0 20px rgba(214,6,30,0.6);
-  text-align: center;
-  font-size: 25px;
-}
-
-.hexagon-small:hover {
-	cursor: pointer;
-}
-
-.hexagon-small:active {
-	background-color: #a3041a;
-}
-
-.hexagon-small:before,
-.hexagon-small:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 35.36px;
-  height: 35.36px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background-color: inherit;
-  left: 7.3223px;
-  box-shadow: 0 0 20px rgba(214,6,30,0.6);
-}
-
-.hexagon-small:before {
-  top: -17.6777px;
-}
-
-.hexagon-small:after {
-  bottom: -17.6777px;
-}
-
-.icon-play {
-	margin-left: 2.5px;
-	background: none !important;
-}
-
-/*cover up extra shadows*/
-.hexagon-small span {
-  display: block;
-  position: absolute;
-  top:0px;
-  left: 0px;
-  width:50px;
-  height:28.8675px;
-  z-index: 2;
 }

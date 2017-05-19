@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { MusicModule } from './music/music.module';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SettingsComponent
+    SettingsComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

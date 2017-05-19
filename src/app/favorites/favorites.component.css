@@ -1,0 +1,117 @@
+.actions {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	display: none;
+}
+
+.game:hover .actions {
+	display: block;
+}
+
+.add-game {
+	position: absolute !important;
+	top: 0;
+	right: 20px;
+	text-align: center;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.add-game:active {
+	background: #a3041a;
+}
+
+.favorite-container {
+	height: 100%;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.game {
+	position: relative;
+	display: inline-block;
+	width: 18%;
+	min-width: 220px;
+	height: 48%;
+	border: 10px solid rgba(95, 95, 95, 0.45);
+}
+
+.stand-cover {
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.gradient {
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 150%;
+}
+
+.hexagon-middle {
+  position: relative;
+  width: 80px; 
+  height: 46.19px;
+  background-color: #d6061e;
+  margin: 23.09px 0;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+}
+
+.hexagon-middle:before,
+.hexagon-middle:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 56.57px;
+  height: 56.57px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 11.7157px;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+}
+
+.hexagon-middle:before {
+  top: -28.2843px;
+}
+
+.hexagon-middle:after {
+  bottom: -28.2843px;
+}
+
+/*cover up extra shadows*/
+.hexagon-middle span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:80px;
+  height:46.1880px;
+  z-index: 2;
+  background: inherit;
+}
+
+.tab-1 {
+	position: absolute;
+	left: 290px;
+}
+
+.tab-2 {
+	position: absolute;
+	left: 350px;
+}
+
+.selected {
+	background-color: #a3041a;
+}
+
+.selected span{
+	background-color: #a3041a;
+}

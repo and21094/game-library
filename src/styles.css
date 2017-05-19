@@ -19,6 +19,7 @@ html{
 }
 
 body{
+  font-family: "Comic Sans MS", cursive, sans-serif;
 	background-image: url("assets/img/bg.jpg");
 	background-size: cover;
 	background-position: bottom;
@@ -43,8 +44,75 @@ body{
     cursor: pointer;
 }
 
+.center-icon {
+  margin-left: 2.5px;
+  background: none !important;
+}
+
 .inline {
   display: inline-block;
+}
+
+.white-font {
+  color: white;
+}
+
+.hexagon-small {
+  color: black;
+  position: relative;
+  width: 50px; 
+  height: 28.87px;
+  background-color: #d6061e;
+  margin: 14.43px 0;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+  text-align: center;
+  font-size: 25px;
+}
+
+.hexagon-small:hover {
+  cursor: pointer;
+}
+
+.hexagon-small:active {
+  background-color: #a3041a;
+}
+
+.hexagon-small:active span{
+  background-color: #a3041a;
+}
+
+.hexagon-small:before,
+.hexagon-small:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 35.36px;
+  height: 35.36px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 7.3223px;
+  box-shadow: 0 0 20px rgba(214,6,30,0.6);
+}
+
+.hexagon-small:before {
+  top: -17.6777px;
+}
+
+.hexagon-small:after {
+  bottom: -17.6777px;
+}
+
+/*cover up extra shadows*/
+.hexagon-small span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:50px;
+  height:28.8675px;
+  z-index: 2;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -64,6 +132,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pc:before {
+  content: "\e902";
+}
 .icon-gamepad:before {
   content: "\e901";
 }
@@ -78,6 +149,9 @@ body{
 }
 .icon-price-tags:before {
   content: "\e936";
+}
+.icon-spinner:before {
+  content: "\e984";
 }
 .icon-cog:before {
   content: "\e994";
@@ -100,3 +174,8 @@ body{
 .icon-play:before {
   content: "\ea1c";
 }
+.icon-new-tab:before {
+  content: "\ea7e";
+}
+
+
