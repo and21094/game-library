@@ -1,0 +1,23 @@
+.consoles-container {
+	text-align: left;
+	overflow-x: auto;
+	overflow-y: hidden;
+	background-color: rgba(95, 95, 95, 0.45);
+	width: 100%;
+	height: 20%;
+}
+.console-icon {
+	display: inline;
+	cursor: pointer;
+	width: 75%;
+	filter: grayscale(100%);
+}
+
+.selected-console {
+	filter: grayscale(0%);
+}
+
+.covers {
+	width: 100%;
+	height: 80%;
+}

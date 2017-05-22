@@ -10,13 +10,17 @@ import { MusicModule } from './music/music.module';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FavEmulatorComponent } from './favorites/fav-emulator/fav-emulator.component';
+import { FavPcComponent } from './favorites/fav-pc/fav-pc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SettingsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    FavEmulatorComponent,
+    FavPcComponent
   ],
   imports: [
     BrowserModule,

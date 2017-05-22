@@ -174,8 +174,9 @@ body{
 .icon-play:before {
   content: "\ea1c";
 }
+.icon-arrow-up:before {
+  content: "\ea32";
+}
 .icon-new-tab:before {
   content: "\ea7e";
 }
-
-

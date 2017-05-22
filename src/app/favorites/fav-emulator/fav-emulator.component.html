@@ -1,0 +1,43 @@
+<div class="consoles-container">
+	<table>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'arcade'}" title="Arcade" (click)="changeConsole('arcade')" src="../../../assets/img/icons/arcade.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'nes'}" title="Nintendo Entertaiment System" (click)="changeConsole('nes')" src="../../../assets/img/icons/nes.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'snes'}" title="Super Nintendo Entertaiment System" (click)="changeConsole('snes')" src="../../../assets/img/icons/snes.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'n64'}" title="Nintendo 64" (click)="changeConsole('n64')" src="../../../assets/img/icons/n64.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'genesis'}" title="Sega Genesis" (click)="changeConsole('genesis')" src="../../../assets/img/icons/genesis.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'ps1'}" title="Play Station" (click)="changeConsole('ps1')" src="../../../assets/img/icons/ps1.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'psp'}" title="Play Station Portable" (click)="changeConsole('psp')" src="../../../assets/img/icons/psp.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'nds'}" title="Nintendo DS" (click)="changeConsole('nds')" src="../../../assets/img/icons/nds.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'gba'}" title="Game Boy Advance" (click)="changeConsole('gba')" src="../../../assets/img/icons/gba.ico">
+		</td>
+		<td>
+			<img class="console-icon" [ngClass]="{'selected-console': selected === 'gb'}" title="Game Boy" (click)="changeConsole('gb')" src="../../../assets/img/icons/gb.ico">
+		</td>
+	</table>
+</div>
+
+<div class="covers">
+	<h1 style="color: white;">
+		<span class="icon-arrow-up"></span>
+		<br>
+		Selecciona una plataforma
+	</h1>
+</div>
+
