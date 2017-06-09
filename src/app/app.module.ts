@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FavEmulatorComponent } from './favorites/fav-emulator/fav-emulator.component';
 import { FavPcComponent } from './favorites/fav-pc/fav-pc.component';
+import { GameFileComponent } from './game-file/game-file.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FavPcComponent } from './favorites/fav-pc/fav-pc.component';
     SettingsComponent,
     FavoritesComponent,
     FavEmulatorComponent,
-    FavPcComponent
+    FavPcComponent,
+    GameFileComponent
   ],
   imports: [
     BrowserModule,

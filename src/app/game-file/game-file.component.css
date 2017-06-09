@@ -1,0 +1,17 @@
+.file-header {
+	position: relative;
+	height: 100%;
+}
+
+.file-banner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	filter: blur(2px);
+	z-index: -1;
+}
+
+.game-content {
+	height: 100%;
+	background-color: rgba(95, 95, 95, 0.50);
+}
