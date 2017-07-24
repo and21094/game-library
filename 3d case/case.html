@@ -64,9 +64,11 @@ body {
 
 
 /* basic styles for the parent */
+
 .showcaseTwo {
   margin-left: 300px;
 }
+
 /* basic styles for the child elements */
 .showcaseTwo li{
   list-style-type: none;
@@ -270,7 +272,7 @@ body {
   right: 502px;
   transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
 }
-/*CASE 5 (CENTER)*/
+/*CASE 5 (CENTER) LEFT*/
 .move-left {
   animation-name: select-left;
   animation-duration: 0.6s;
@@ -285,6 +287,24 @@ body {
   transform: perspective(1000px) rotateY(-45deg) translateY(0px) !important;
   z-index: 5;
 }
+
+/*CASE 5 (CENTER) RIGHT*/
+.move-right {
+  animation-name: select-right;
+  animation-duration: 0.6s;
+}
+
+@keyframes select-right {
+    100% {transform: rotateY(45deg) translateY(0px) translateX(-388px) translateZ(500px) !important;}
+}
+
+.stay-right {
+  left: -88px;
+  transform: perspective(1000px) rotateY(45deg) translateY(0px) !important;
+  z-index: 5;
+}
+
+</style>
 
 </style>
 
@@ -329,8 +349,11 @@ body {
       break;
       case 'six':
         $("."+string).addClass("move6");
+        $(".five").addClass("move-right");
+        $(".five").addClass("stay-right");
         window.setTimeout(function(){
           $("."+string).removeClass("move6");
+          $(".five").removeClass("move-right");
           $("."+string).addClass("stay6");
         },550);
       break;
