@@ -1,0 +1,292 @@
+.display-container {
+  margin-left: 11.7%;
+  margin-top: 60px;
+}
+
+/* basic styles for the parent */
+.showcase {
+}
+/* basic styles for the child elements */
+.showcase li{
+  list-style-type: none;
+  height: 400px;
+  width: 258px;
+  float: left;
+  border-radius: 0 8px 8px 0;
+  background-size: cover;
+  background-position: -35px 0px;
+  margin-left: -170px;
+  position: relative;
+  transform: perspective(1000px) rotateY(45deg);
+  transform-style: preserve-3d;
+  transition: 0.3s ease-in-out;
+}
+.showcase li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  background-position: 0px 0px;
+  transform: rotateY(90deg);
+  transform-origin: left center;
+  width: 30px;
+  height: 100%;
+}
+
+.showcase li:hover {
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(45deg) translateY(-15px);
+}
+
+
+/* basic styles for the parent */
+
+.showcaseTwo {
+  margin-left: 740px;
+}
+
+/* basic styles for the child elements */
+.showcaseTwo li{
+  list-style-type: none;
+  height: 400px;
+  width: 258px;
+  float: left;
+  border-radius: 0px 0 0px 0px;
+  background-size: cover;
+  background-position: -35px 0px;
+  margin-left: -170px;
+  position: relative;
+  transform: perspective(1000px) rotateY(-45deg);
+  transform-style: preserve-3d;
+  transition: 0.3s ease-in-out;
+}
+
+.five-left:before {
+  left: 258px !important;
+  background-position: 30px 0px !important;
+  transform: rotateY(90deg) !important;
+}
+
+.showcaseTwo li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 258px;
+  background: inherit;
+  background-position: 30px 0px;
+  transform: rotateY(90deg);
+  transform-origin: left center;
+  width: 30px;
+  height: 100%;
+}
+.showcaseTwo li:hover {
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(-45deg) translateY(-15px);
+}
+
+/*.one {
+    background: url("black-case-template-1.png");
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(45deg);
+}
+.two {
+    background: url("black-case-template-2.png");
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(45deg);
+}
+.three {
+    background: url("black-case-template-3.png");
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(45deg);
+}
+.four {
+    background: url("black-case-template-4.png");
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(45deg);
+}*/
+.five {
+    /*background: url("black-case-template.png");*/
+    transform-style: preserve-3d;
+    left: 150px;
+    transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+}
+
+.five:hover {
+  transform: translateY(-15px) !important;
+}
+
+.six {
+    z-index: 4;
+}
+.seven {
+    z-index: 3;
+}
+.eight {
+    z-index: 2;
+}
+.nine{
+    z-index: 1;
+}
+
+
+/*MOVIMIENTOS DE CASES*/
+
+/*CASE 1*/
+.move1 {
+  z-index: 5;
+  animation-name: select1;
+  animation-duration: 0.6s;
+}
+
+@keyframes select1 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(502px) translateZ(500px);}
+}
+
+.stay1 {
+  left: 502px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+}
+/*CASE 2*/
+.move2 {
+  z-index: 5;
+  animation-name: select2;
+  animation-duration: 0.6s;
+}
+
+@keyframes select2 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(414px) translateZ(500px);}
+}
+
+.stay2 {
+  left: 414px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+}
+/*CASE 3*/
+.move3 {
+  z-index: 5;
+  animation-name: select3;
+  animation-duration: 0.6s;
+}
+
+@keyframes select3 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(326px) translateZ(500px);}
+}
+
+.stay3 {
+  left: 326px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+}
+/*CASE 4*/
+.move4 {
+  animation-name: select4;
+  animation-duration: 0.6s;
+}
+
+@keyframes select4 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(238px) translateZ(500px);}
+}
+
+.stay4 {
+  left: 238px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+}
+/*CASE 6*/
+.move6 {
+  animation-name: select6;
+  animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+@keyframes select6 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(-238px) translateZ(500px);}
+}
+
+.stay6 {
+  right: 238px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+/*CASE 7*/
+.move7 {
+  z-index: 5;
+  animation-name: select7;
+  animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+@keyframes select7 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(-326px) translateZ(500px);}
+}
+
+.stay7 {
+  right: 326px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+/*CASE 8*/
+.move8 {
+  z-index: 5;
+  animation-name: select8;
+  animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+@keyframes select8 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(-414px) translateZ(500px);}
+}
+
+.stay8 {
+  right: 414px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+/*CASE 9*/
+.move9 {
+  z-index: 5;
+  animation-name: select9;
+  animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+@keyframes select9 {
+    100% {transform: rotateY(0deg) translateY(0px) translateX(-502px) translateZ(500px);}
+}
+
+.stay9 {
+  right: 502px;
+  transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+/*CASE 5 (CENTER) LEFT*/
+.move-left {
+  animation-name: select-left;
+  animation-duration: 0.6s;
+}
+
+@keyframes select-left {
+    100% {transform: rotateY(-45deg) translateY(0px) translateX(388px) translateZ(500px) !important;}
+}
+
+.stay-left {
+  left: 388px;
+  transform: perspective(1000px) rotateY(-45deg) translateY(0px) !important;
+  border-radius: 0 0px 0px 0 !important;
+  z-index: 5;
+}
+
+/*CASE 5 (CENTER) RIGHT*/
+.move-right {
+  animation-name: select-right;
+  animation-duration: 0.6s;
+}
+
+@keyframes select-right {
+    100% {transform: rotateY(45deg) translateY(0px) translateX(-388px) translateZ(500px) !important;}
+}
+
+.stay-right {
+  left: -88px;
+  transform: perspective(1000px) rotateY(45deg) translateY(0px) !important;
+  z-index: 5;
+}

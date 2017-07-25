@@ -9,7 +9,7 @@ export class FavoritesComponent implements OnInit {
 
   pc: string = 'hexagon-small inline tab-1 selected'
   emulator: string = 'hexagon-small inline tab-2'
-  showPc: boolean = false
+  showPc: boolean = true
 
   constructor() { }
 

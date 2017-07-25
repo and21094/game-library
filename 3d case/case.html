@@ -57,6 +57,7 @@ body {
   width: 30px;
   height: 100%;
 }
+
 .showcase li:hover {
   cursor: pointer;
   transform: perspective(1000px) rotateY(45deg) translateY(-15px);
@@ -84,6 +85,13 @@ body {
   transform-style: preserve-3d;
   transition: 0.3s ease-in-out;
 }
+
+.five-left:before {
+  left: 258px !important;
+  background-position: 30px 0px !important;
+  transform: rotateY(90deg) !important;
+}
+
 .showcaseTwo li:before {
   content: '';
   position: absolute;
@@ -162,6 +170,7 @@ body {
 
 /*CASE 1*/
 .move1 {
+  z-index: 5;
   animation-name: select1;
   animation-duration: 0.6s;
 }
@@ -176,6 +185,7 @@ body {
 }
 /*CASE 2*/
 .move2 {
+  z-index: 5;
   animation-name: select2;
   animation-duration: 0.6s;
 }
@@ -190,6 +200,7 @@ body {
 }
 /*CASE 3*/
 .move3 {
+  z-index: 5;
   animation-name: select3;
   animation-duration: 0.6s;
 }
@@ -220,6 +231,7 @@ body {
 .move6 {
   animation-name: select6;
   animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 @keyframes select6 {
@@ -229,11 +241,14 @@ body {
 .stay6 {
   right: 238px;
   transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 /*CASE 7*/
 .move7 {
+  z-index: 5;
   animation-name: select7;
   animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 @keyframes select7 {
@@ -243,11 +258,14 @@ body {
 .stay7 {
   right: 326px;
   transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 /*CASE 8*/
 .move8 {
+  z-index: 5;
   animation-name: select8;
   animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 @keyframes select8 {
@@ -257,11 +275,14 @@ body {
 .stay8 {
   right: 414px;
   transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 /*CASE 9*/
 .move9 {
+  z-index: 5;
   animation-name: select9;
   animation-duration: 0.6s;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 @keyframes select9 {
@@ -271,6 +292,7 @@ body {
 .stay9 {
   right: 502px;
   transform: perspective(0px) rotateY(0deg) translateY(0px) !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 /*CASE 5 (CENTER) LEFT*/
 .move-left {
@@ -285,6 +307,7 @@ body {
 .stay-left {
   left: 388px;
   transform: perspective(1000px) rotateY(-45deg) translateY(0px) !important;
+  border-radius: 0 0px 0px 0 !important;
   z-index: 5;
 }
 
@@ -306,9 +329,6 @@ body {
 
 </style>
 
-</style>
-
-
 <script type="text/javascript">
 
   function move(string) {
@@ -316,21 +336,33 @@ body {
     switch (string) {
       case 'one':
         $("."+string).addClass("move1");
+        $(".five").addClass("move-left");
+        $(".five").addClass("stay-left");
+        $(".five").addClass("five-left");
         window.setTimeout(function(){
+          $(".five").removeClass("move-left");
           $("."+string).removeClass("move1");
           $("."+string).addClass("stay1");
         },550);
       break;
       case 'two':
         $("."+string).addClass("move2");
+        $(".five").addClass("move-left");
+        $(".five").addClass("stay-left");
+        $(".five").addClass("five-left");
         window.setTimeout(function(){
+          $(".five").removeClass("move-left");
           $("."+string).removeClass("move2");
           $("."+string).addClass("stay2");
         },550);
       break;
       case 'three':
         $("."+string).addClass("move3");
+        $(".five").addClass("move-left");
+        $(".five").addClass("stay-left");
+        $(".five").addClass("five-left");
         window.setTimeout(function(){
+          $(".five").removeClass("move-left");
           $("."+string).removeClass("move3");
           $("."+string).addClass("stay3");
         },550);
@@ -340,40 +372,51 @@ body {
         //move center case to left
         $(".five").addClass("move-left");
         $(".five").addClass("stay-left");
+        $(".five").addClass("five-left");
         window.setTimeout(function(){
-          $("."+string).removeClass("move4");
           $(".five").removeClass("move-left");
+          $("."+string).removeClass("move4");
           $("."+string).addClass("stay4");
         },550);
 
       break;
+      // SECOND HALF
       case 'six':
         $("."+string).addClass("move6");
         $(".five").addClass("move-right");
         $(".five").addClass("stay-right");
         window.setTimeout(function(){
-          $("."+string).removeClass("move6");
           $(".five").removeClass("move-right");
+          $("."+string).removeClass("move6");
           $("."+string).addClass("stay6");
         },550);
       break;
       case 'seven':
         $("."+string).addClass("move7");
+        $(".five").addClass("move-right");
+        $(".five").addClass("stay-right");
         window.setTimeout(function(){
+          $(".five").removeClass("move-right");
           $("."+string).removeClass("move7");
           $("."+string).addClass("stay7");
         },550);
       break;
       case 'eight':
         $("."+string).addClass("move8");
+        $(".five").addClass("move-right");
+        $(".five").addClass("stay-right");
         window.setTimeout(function(){
+          $(".five").removeClass("move-right");
           $("."+string).removeClass("move8");
           $("."+string).addClass("stay8");
         },550);
       break;
       case 'nine':
         $("."+string).addClass("move9");
+        $(".five").addClass("move-right");
+        $(".five").addClass("stay-right");
         window.setTimeout(function(){
+          $(".five").removeClass("move-right");
           $("."+string).removeClass("move9");
           $("."+string).addClass("stay9");
         },550);
