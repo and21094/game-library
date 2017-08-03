@@ -1,18 +1,28 @@
 
 <div class="display-container">
 	<ul class="showcase">
-  	 	<li class="one" [ngStyle]="{'background-image': 'url(' +getStyle(0)+ ')'}"></li>
-   	 	<li class="two" [ngStyle]="{'background-image': 'url(' +getStyle(1)+ ')'}"></li>
-   	 	<li class="three" [ngStyle]="{'background-image': 'url(' +getStyle(2)+ ')'}"></li>
-   	 	<li class="four" [ngStyle]="{'background-image': 'url(' +getStyle(3)+ ')'}"></li>
-   	 	<li class="five" [ngStyle]="{'background-image': 'url(' +getStyle(4)+ ')'}"></li>
+  	 	<li id="one" class="one" (click)="move('one')" [ngStyle]="{'background-image': 'url(' +getStyle(0)+ ')'}"></li>
+   	 	<li id="two" class="two" (click)="move('two')"[ngStyle]="{'background-image': 'url(' +getStyle(1)+ ')'}"></li>
+   	 	<li id="three" class="three" (click)="move('three')" [ngStyle]="{'background-image': 'url(' +getStyle(2)+ ')'}"></li>
+   	 	<li id="four" class="four" (click)="move('four')" [ngStyle]="{'background-image': 'url(' +getStyle(3)+ ')'}"></li>
+   	 	<!-- CASE CENTRAL!-->
+   	 	<li id="five" class="five" [ngStyle]="{'background-image': 'url(' +getStyle(4)+ ')'}">
+   	 		<p class="game-case-name" [hidden]='!visibleTagName'>
+				{{games[4].name}}
+			</p>
+   	 	</li>
+   	 	<!-- /CASE CENTRAL!-->
 	</ul>
 	<ul class="showcaseTwo">
-  		<li class="six" [ngStyle]="{'background-image': 'url(' +getStyle(5)+ ')'}"></li>
-  		<li class="seven" [ngStyle]="{'background-image': 'url(' +getStyle(6)+ ')'}"></li>
-    	<li class="eight" [ngStyle]="{'background-image': 'url(' +getStyle(7)+ ')'}"></li>
-   		<li class="nine" [ngStyle]="{'background-image': 'url(' +getStyle(8)+ ')'}"></li>
+  		<li id="six" class="six" (click)="move('six')" [ngStyle]="{'background-image': 'url(' +getStyle(5)+ ')'}"></li>
+  		<li id="seven" class="seven" (click)="move('seven')" [ngStyle]="{'background-image': 'url(' +getStyle(6)+ ')'}"></li>
+    	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +getStyle(7)+ ')'}"></li>
+   		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +getStyle(8)+ ')'}"></li>
 	</ul>
+</div>
+
+<div class="game-modal-black">
+	<img class="game-modal-black-bg" src="../../assets/img/black-case-open.png">
 </div>	
 
 	<!--div class="game">

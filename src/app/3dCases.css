@@ -1,3 +1,24 @@
+.game-modal-black {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 60%;
+  height: 80%;
+  background-color: black;
+  z-index: 100;
+}
+
+.game-modal-black-bg {
+  width: 100%;
+}
+
+.game-case-name {
+  margin-top: 430px;
+  color: white;
+}
+
 .display-container {
   margin-left: 11.7%;
   margin-top: 60px;
