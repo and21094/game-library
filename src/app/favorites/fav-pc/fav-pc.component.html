@@ -6,7 +6,8 @@
    	 	<li id="three" class="three" (click)="move('three')" [ngStyle]="{'background-image': 'url(' +getStyle(2)+ ')'}"></li>
    	 	<li id="four" class="four" (click)="move('four')" [ngStyle]="{'background-image': 'url(' +getStyle(3)+ ')'}"></li>
    	 	<!-- CASE CENTRAL!-->
-   	 	<li id="five" class="five" [ngStyle]="{'background-image': 'url(' +getStyle(4)+ ')'}">
+   	 	<li id="five" class="five" [ngStyle]="{'background-image': 'url(' +getStyle(4)+ ')'}"
+   	 	(click)="displayModal()">
    	 		<p class="game-case-name" [hidden]='!visibleTagName'>
 				{{games[4].name}}
 			</p>
@@ -21,8 +22,10 @@
 	</ul>
 </div>
 
-<div class="game-modal-black">
-	<img class="game-modal-black-bg" src="../../assets/img/black-case-open.png">
+<div id="game-modal-black" class="game-modal-black" [hidden]='!showModal'>
+	<div style="position: absolute; width: 10px; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
+	<div style="right: 0; position: absolute; width: 10px; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
+	<img class="game-modal-black-bg" src="../../assets/img/black-case-open-gta.png">
 </div>	
 
 	<!--div class="game">

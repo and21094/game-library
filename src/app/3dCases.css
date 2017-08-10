@@ -4,13 +4,21 @@
   top: 0; left: 0; bottom: 0; right: 0;
   margin-left: auto; 
   margin-right: auto; 
-  width: 60%;
-  height: 80%;
+  /*width: 800px;*/
+  width: 0;
+  height: 400px;
   z-index: 100;
 }
 
+.game-modal-black-open {
+  width: 800px;
+  height: 547px;
+}
+
+
 .game-modal-black-bg {
   width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -310,4 +318,31 @@
   left: -88px;
   transform: perspective(1000px) rotateY(45deg) translateY(0px) !important;
   z-index: 5;
+}
+
+/*OPEN / CLOSE MODAL*/
+.start-open {
+    transform: rotateY(90deg) !important;
+}
+
+.start-open:hover{
+  transform: rotateY(90deg) !important;
+}
+
+.open-case {
+  animation-name: open-modal;
+  animation-duration: 0.6s;
+}
+
+@keyframes open-modal {
+    100% {width: 800px; height: 547px;}
+}
+
+.close-case {
+  animation-name: close-modal;
+  animation-duration: 0.6s;
+}
+
+@keyframes close-modal {
+    100% {width: 0px; height: 400px;}
 }

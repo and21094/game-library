@@ -9,6 +9,7 @@ export class FavPcComponent implements OnInit {
 
   games:any = []
   visibleTagName:boolean = true
+  showModal:boolean = false
 
   constructor() { }
 
@@ -63,6 +64,28 @@ export class FavPcComponent implements OnInit {
 
   }
 
+  displayModal(){
+  	var center = (<HTMLInputElement>document.getElementById('five'))
+  	center.className = "five start-open";
+  	this.showModal = true
+  	var modal = (<HTMLInputElement>document.getElementById('game-modal-black'))
+    window.setTimeout(function(){
+    		modal.className = modal.className.concat(" open-case")
+    		window.setTimeout(function(){
+    				modal.className = " game-modal-black game-modal-black-open"
+    		},550);
+    },550);  
+  }
+
+  closeModal(){
+
+	var modal = (<HTMLInputElement>document.getElementById('game-modal-black'))
+	modal.className = modal.className.concat(" close-case")
+    window.setTimeout(function(){
+    		modal.className = " game-modal-black"
+    		this.showModal = false
+    },550);
+  }
 //var divToChange = (<HTMLInputElement>document.getElementById(elementId));
 
 //to change the class we would do.
