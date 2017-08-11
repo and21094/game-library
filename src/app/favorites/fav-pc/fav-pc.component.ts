@@ -124,71 +124,54 @@ export class FavPcComponent implements OnInit {
 
 //Which we would agree is a bit more stressful than what angular ships with us.
 
+  moveLeft(moving, position, next, animation){
+
+    var center = (<HTMLInputElement>document.getElementById('five'));
+    var six = (<HTMLInputElement>document.getElementById('six'));
+    var seven = (<HTMLInputElement>document.getElementById('seven'));
+    var eight = (<HTMLInputElement>document.getElementById('eight'));
+    var nine = (<HTMLInputElement>document.getElementById('nine'));
+
+    moving.className = moving.className.concat(" move"+animation);
+        center.className = "five stay-left five-left";
+
+        window.setTimeout(() =>{
+          moving.className = position+" stay"+animation
+          center.className = "notransition five"
+          this.imageFive = this.games[next].case
+          this.centerGame = this.games[next].name
+          this.visibleTagName = true;
+
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = position
+
+        },550);
+
+        this.imageSix = this.games[0].case
+        if (six.style.visibility == 'hidden') {
+          six.style.visibility = 'visible'
+        }
+
+  }
+
   move(position){
   	var moving = (<HTMLInputElement>document.getElementById(position));
-  	var center = (<HTMLInputElement>document.getElementById('five'));
+    var center = (<HTMLInputElement>document.getElementById('five'));
   	this.visibleTagName = false;
   	switch (position) {
       case 'one':
-        moving.className = moving.className.concat(" move1");
-        center.className = "five stay-left five-left";
-        window.setTimeout(() =>{
-          moving.className = position+" stay1"
-          center.className = "notransition five"
-          this.imageFive = this.games[0].case
-          this.centerGame = this.games[0].name
-          this.visibleTagName = true;
-          window.setTimeout(() =>{
-            center.className = "five"
-          },100);
-          moving.className = "one"
-        },550);
+        this.moveLeft(moving, position, 4, 1)
       break;
       case 'two':
-        moving.className = moving.className.concat(" move2");
-        center.className = "five stay-left five-left";
-        window.setTimeout(() =>{
-          moving.className = position+" stay2";
-          center.className = "notransition five"
-          this.imageFive = this.games[1].case
-          this.centerGame = this.games[1].name
-          this.visibleTagName = true;
-          window.setTimeout(() =>{
-            center.className = "five"
-          },100);
-          moving.className = "two"
-        },550);
+        this.moveLeft(moving, position, 3, 2)
       break;
       case 'three':
-        moving.className = moving.className.concat(" move3");
-        center.className = "five stay-left five-left";
-        window.setTimeout(() =>{
-          moving.className = position+" stay3";
-          center.className = "notransition five"
-          this.imageFive = this.games[2].case
-          this.centerGame = this.games[2].name
-          this.visibleTagName = true;
-          window.setTimeout(() =>{
-            center.className = "five"
-          },100);
-          moving.className = "three"
-        },550);
+        this.moveLeft(moving, position, 2, 3)
       break;
       case 'four':
-        moving.className = moving.className.concat(" move4");
-        center.className = "five stay-left five-left";
-        window.setTimeout(() =>{
-          moving.className = position+" stay4";
-          center.className = "notransition five"
-          this.imageFive = this.games[3].case
-          this.centerGame = this.games[3].name
-          this.visibleTagName = true;
-          window.setTimeout(() =>{
-            center.className = "five"
-          },100);
-          moving.className = "four"
-        },550);
-
+        this.moveLeft(moving, position, 1, 4)
       break;
       // SECOND HALF
       case 'six':
@@ -203,6 +186,7 @@ export class FavPcComponent implements OnInit {
           window.setTimeout(() =>{
             center.className = "five"
           },100);
+          moving.style.zIndex = "4"
           moving.className = "six"
         },550);
       break;
@@ -258,50 +242,26 @@ export class FavPcComponent implements OnInit {
     for (var i = 0; i <= this.games.length ; i++) {
       switch (i){
       case 0:
-        this.imageOne = this.games[i].case
+        this.imageFive = this.games[i].case
+        this.centerGame = this.games[i].name
       case 1:
-        this.imageTwo = this.games[i].case
+        this.imageFour = this.games[i].case
       case 2:
         this.imageThree = this.games[i].case
       case 3:
-        this.imageFour = this.games[i].case
+        this.imageTwo = this.games[i].case
       case 4:
-        this.imageFive = this.games[i].case
-        this.centerGame = this.games[i].name
-      case 5:
-        this.imageSix = this.games[i].case
-      case 6:
-        this.imageSeven = this.games[i].case
-      case 7:
-        this.imageEight = this.games[i].case
-      case 8:
-        this.imageNine = this.games[i].case
+        this.imageOne = this.games[i].case
+      // case 5:
+      //   this.imageSix = this.games[i].case
+      // case 6:
+      //   this.imageSeven = this.games[i].case
+      // case 7:
+      //   this.imageEight = this.games[i].case
+      // case 8:
+      //   this.imageNine = this.games[i].case
       }
     }
-  }
-
-  getStyle(position){
-  	switch (position){
-  		case 0:
-  			return this.games[position].case
-  		case 1:
-  			return this.games[position].case
-  		case 2:
-  			return this.games[position].case
-  		case 3:
-  			return this.games[position].case
-  		case 4:
-  			return this.games[position].case
-  		case 5:
-  			return this.games[position].case
-  		case 6:
-  			return this.games[position].case
-  		case 7:
-  			return this.games[position].case
-  		case 8:
-  			return this.games[position].case
-  	}
-
   }
 
 }

@@ -16,17 +16,17 @@
    	 	<!-- /CASE CENTRAL!-->
 	</ul>
 	<ul class="showcaseTwo">
-  		<li id="six" class="six" (click)="move('six')" [ngStyle]="{'background-image': 'url(' +imageSix+ ')'}"></li>
-  		<li id="seven" class="seven" (click)="move('seven')" [ngStyle]="{'background-image': 'url(' +imageSeven+ ')'}"></li>
-    	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +imageEight+ ')'}"></li>
-   		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +imageNine+ ')'}"></li>
+  		<li id="six" class="six" (click)="move('six')" [ngStyle]="{'background-image': 'url(' +imageSix+ ')'}" style="visibility: hidden;"></li>
+  		<li id="seven" class="seven" (click)="move('seven')" [ngStyle]="{'background-image': 'url(' +imageSeven+ ')'}" style="visibility: hidden;"></li>
+    	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +imageEight+ ')'}" style="visibility: hidden;"></li>
+   		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +imageNine+ ')'}" style="visibility: hidden;"></li>
 	</ul>
 	</div>
 </div>
 
 <div id="game-modal-black" class="game-modal-black" >
-	<div style="position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar izq" (click)="closeModal()"></div>
-	<div style="right: 0; position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar der" (click)="closeModal()"></div>
+	<div style="position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
+	<div style="right: 0; position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
 	<img class="game-modal-black-bg" src="../../assets/img/black-case-open-gta.png">
 </div>	
 
