@@ -66,24 +66,32 @@ export class FavPcComponent implements OnInit {
 
   displayModal(){
   	var center = (<HTMLInputElement>document.getElementById('five'))
-  	center.className = "five start-open";
+  	center.className = "five start-open five-left";
   	this.showModal = true
   	var modal = (<HTMLInputElement>document.getElementById('game-modal-black'))
-    window.setTimeout(function(){
+    window.setTimeout(() =>{
     		modal.className = modal.className.concat(" open-case")
-    		window.setTimeout(function(){
+    		window.setTimeout(() =>{
     				modal.className = " game-modal-black game-modal-black-open"
+            this.visibleTagName = false
     		},550);
-    },550);  
+    },550);
   }
 
   closeModal(){
-
-	var modal = (<HTMLInputElement>document.getElementById('game-modal-black'))
-	modal.className = modal.className.concat(" close-case")
-    window.setTimeout(function(){
-    		modal.className = " game-modal-black"
+    var center = (<HTMLInputElement>document.getElementById('five'))
+	  var modal = (<HTMLInputElement>document.getElementById('game-modal-black'))
+	  modal.className = modal.className.concat(" close-case")
+    this.visibleTagName = true
+      window.setTimeout(() =>{
+    		modal.className = "game-modal-black"
     		this.showModal = false
+        window.setTimeout(() =>{
+          center.className = "five-left five"
+          window.setTimeout(() =>{
+            center.className = "five"
+          },200);
+        },400);
     },550);
   }
 //var divToChange = (<HTMLInputElement>document.getElementById(elementId));
@@ -113,28 +121,28 @@ export class FavPcComponent implements OnInit {
       case 'one':
         moving.className = moving.className.concat(" move1");
         center.className = "five stay-left five-left";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay1"
         },550);
       break;
       case 'two':
         moving.className = moving.className.concat(" move2");
         center.className = "five stay-left five-left";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay2";
         },550);
       break;
       case 'three':
         moving.className = moving.className.concat(" move3");
         center.className = "five stay-left five-left";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay3";
         },550);
       break;
       case 'four':
         moving.className = moving.className.concat(" move4");
         center.className = "five stay-left five-left";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay4";
         },550);
 
@@ -143,28 +151,28 @@ export class FavPcComponent implements OnInit {
       case 'six':
         moving.className = moving.className.concat(" move6");
         center.className = "five stay-right";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay6";
         },550);
       break;
       case 'seven':
         moving.className = moving.className.concat(" move7");
         center.className = "five stay-right";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay7";
         },550);
       break;
       case 'eight':
         moving.className = moving.className.concat(" move8");
         center.className = "five stay-right";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay8";
         },550);
       break;
       case 'nine':
         moving.className = moving.className.concat(" move9");
         center.className = "five stay-right";
-        window.setTimeout(function(){
+        window.setTimeout(() =>{
           moving.className = position+" stay9";
         },550);
       break;

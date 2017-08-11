@@ -2,9 +2,6 @@
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  margin-left: auto; 
-  margin-right: auto; 
-  /*width: 800px;*/
   width: 0;
   height: 400px;
   z-index: 100;
@@ -322,7 +319,7 @@
 
 /*OPEN / CLOSE MODAL*/
 .start-open {
-    transform: rotateY(90deg) !important;
+    transform: rotateY(-90deg) !important;
 }
 
 .start-open:hover{

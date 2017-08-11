@@ -1,6 +1,7 @@
 
 <div class="display-container">
-	<ul class="showcase">
+	<div style="position: absolute; margin: auto;">
+		<ul class="showcase">
   	 	<li id="one" class="one" (click)="move('one')" [ngStyle]="{'background-image': 'url(' +getStyle(0)+ ')'}"></li>
    	 	<li id="two" class="two" (click)="move('two')"[ngStyle]="{'background-image': 'url(' +getStyle(1)+ ')'}"></li>
    	 	<li id="three" class="three" (click)="move('three')" [ngStyle]="{'background-image': 'url(' +getStyle(2)+ ')'}"></li>
@@ -20,11 +21,12 @@
     	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +getStyle(7)+ ')'}"></li>
    		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +getStyle(8)+ ')'}"></li>
 	</ul>
+	</div>
 </div>
 
 <div id="game-modal-black" class="game-modal-black" [hidden]='!showModal'>
-	<div style="position: absolute; width: 10px; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
-	<div style="right: 0; position: absolute; width: 10px; height: 100%; cursor: pointer;" title="cerrar" (click)="closeModal()"></div>
+	<div style="position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar izq" (click)="closeModal()"></div>
+	<div style="right: 0; position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar der" (click)="closeModal()"></div>
 	<img class="game-modal-black-bg" src="../../assets/img/black-case-open-gta.png">
 </div>	
 
