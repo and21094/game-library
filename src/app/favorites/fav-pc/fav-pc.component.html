@@ -1,30 +1,30 @@
 
 <div class="display-container">
-	<div style="position: absolute; margin: auto;">
+	<div style="margin:0 auto; width: 90%;">
 		<ul class="showcase">
-  	 	<li id="one" class="one" (click)="move('one')" [ngStyle]="{'background-image': 'url(' +getStyle(0)+ ')'}"></li>
-   	 	<li id="two" class="two" (click)="move('two')"[ngStyle]="{'background-image': 'url(' +getStyle(1)+ ')'}"></li>
-   	 	<li id="three" class="three" (click)="move('three')" [ngStyle]="{'background-image': 'url(' +getStyle(2)+ ')'}"></li>
-   	 	<li id="four" class="four" (click)="move('four')" [ngStyle]="{'background-image': 'url(' +getStyle(3)+ ')'}"></li>
+  	 	<li id="one" class="one" (click)="move('one')" [ngStyle]="{'background-image': 'url(' +imageOne+ ')'}"></li>
+   	 	<li id="two" class="two" (click)="move('two')"[ngStyle]="{'background-image': 'url(' +imageTwo+ ')'}"></li>
+   	 	<li id="three" class="three" (click)="move('three')" [ngStyle]="{'background-image': 'url(' +imageThree+ ')'}"></li>
+   	 	<li id="four" class="four" (click)="move('four')" [ngStyle]="{'background-image': 'url(' +imageFour+ ')'}"></li>
    	 	<!-- CASE CENTRAL!-->
-   	 	<li id="five" class="five" [ngStyle]="{'background-image': 'url(' +getStyle(4)+ ')'}"
+   	 	<li id="five" class="five" [ngStyle]="{'background-image': 'url(' +imageFive+ ')'}"
    	 	(click)="displayModal()">
    	 		<p class="game-case-name" [hidden]='!visibleTagName'>
-				{{games[4].name}}
+				{{centerGame}}
 			</p>
    	 	</li>
    	 	<!-- /CASE CENTRAL!-->
 	</ul>
 	<ul class="showcaseTwo">
-  		<li id="six" class="six" (click)="move('six')" [ngStyle]="{'background-image': 'url(' +getStyle(5)+ ')'}"></li>
-  		<li id="seven" class="seven" (click)="move('seven')" [ngStyle]="{'background-image': 'url(' +getStyle(6)+ ')'}"></li>
-    	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +getStyle(7)+ ')'}"></li>
-   		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +getStyle(8)+ ')'}"></li>
+  		<li id="six" class="six" (click)="move('six')" [ngStyle]="{'background-image': 'url(' +imageSix+ ')'}"></li>
+  		<li id="seven" class="seven" (click)="move('seven')" [ngStyle]="{'background-image': 'url(' +imageSeven+ ')'}"></li>
+    	<li id="eight" class="eight" (click)="move('eight')" [ngStyle]="{'background-image': 'url(' +imageEight+ ')'}"></li>
+   		<li id="nine" class="nine" (click)="move('nine')" [ngStyle]="{'background-image': 'url(' +imageNine+ ')'}"></li>
 	</ul>
 	</div>
 </div>
 
-<div id="game-modal-black" class="game-modal-black" [hidden]='!showModal'>
+<div id="game-modal-black" class="game-modal-black" >
 	<div style="position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar izq" (click)="closeModal()"></div>
 	<div style="right: 0; position: absolute; width: 1.5%; height: 100%; cursor: pointer;" title="cerrar der" (click)="closeModal()"></div>
 	<img class="game-modal-black-bg" src="../../assets/img/black-case-open-gta.png">

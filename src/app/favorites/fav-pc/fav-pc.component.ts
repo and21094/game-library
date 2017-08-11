@@ -10,6 +10,16 @@ export class FavPcComponent implements OnInit {
   games:any = []
   visibleTagName:boolean = true
   showModal:boolean = false
+  centerGame:string = ''
+  imageOne:string = ''
+  imageTwo:string = ''
+  imageThree:string = ''
+  imageFour:string = ''
+  imageFive:string = ''
+  imageSix:string = ''
+  imageSeven:string = ''
+  imageEight:string = ''
+  imageNine:string = ''
 
   constructor() { }
 
@@ -62,6 +72,7 @@ export class FavPcComponent implements OnInit {
   	  	},
   	  	]
 
+        this.setStyles()
   }
 
   displayModal(){
@@ -123,6 +134,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-left five-left";
         window.setTimeout(() =>{
           moving.className = position+" stay1"
+          center.className = "notransition five"
+          this.imageFive = this.games[0].case
+          this.centerGame = this.games[0].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "one"
         },550);
       break;
       case 'two':
@@ -130,6 +149,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-left five-left";
         window.setTimeout(() =>{
           moving.className = position+" stay2";
+          center.className = "notransition five"
+          this.imageFive = this.games[1].case
+          this.centerGame = this.games[1].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "two"
         },550);
       break;
       case 'three':
@@ -137,6 +164,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-left five-left";
         window.setTimeout(() =>{
           moving.className = position+" stay3";
+          center.className = "notransition five"
+          this.imageFive = this.games[2].case
+          this.centerGame = this.games[2].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "three"
         },550);
       break;
       case 'four':
@@ -144,6 +179,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-left five-left";
         window.setTimeout(() =>{
           moving.className = position+" stay4";
+          center.className = "notransition five"
+          this.imageFive = this.games[3].case
+          this.centerGame = this.games[3].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "four"
         },550);
 
       break;
@@ -153,6 +196,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-right";
         window.setTimeout(() =>{
           moving.className = position+" stay6";
+          center.className = "notransition five"
+          this.imageFive = this.games[5].case
+          this.centerGame = this.games[5].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "six"
         },550);
       break;
       case 'seven':
@@ -160,6 +211,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-right";
         window.setTimeout(() =>{
           moving.className = position+" stay7";
+          center.className = "notransition five"
+          this.imageFive = this.games[6].case
+          this.centerGame = this.games[6].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "seven"
         },550);
       break;
       case 'eight':
@@ -167,6 +226,14 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-right";
         window.setTimeout(() =>{
           moving.className = position+" stay8";
+          center.className = "notransition five"
+          this.imageFive = this.games[7].case
+          this.centerGame = this.games[7].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "eight"
         },550);
       break;
       case 'nine':
@@ -174,8 +241,42 @@ export class FavPcComponent implements OnInit {
         center.className = "five stay-right";
         window.setTimeout(() =>{
           moving.className = position+" stay9";
+          center.className = "notransition five"
+          this.imageFive = this.games[8].case
+          this.centerGame = this.games[8].name
+          this.visibleTagName = true;
+          window.setTimeout(() =>{
+            center.className = "five"
+          },100);
+          moving.className = "nine"
         },550);
       break;
+    }
+  }
+
+  setStyles(){
+    for (var i = 0; i <= this.games.length ; i++) {
+      switch (i){
+      case 0:
+        this.imageOne = this.games[i].case
+      case 1:
+        this.imageTwo = this.games[i].case
+      case 2:
+        this.imageThree = this.games[i].case
+      case 3:
+        this.imageFour = this.games[i].case
+      case 4:
+        this.imageFive = this.games[i].case
+        this.centerGame = this.games[i].name
+      case 5:
+        this.imageSix = this.games[i].case
+      case 6:
+        this.imageSeven = this.games[i].case
+      case 7:
+        this.imageEight = this.games[i].case
+      case 8:
+        this.imageNine = this.games[i].case
+      }
     }
   }
 

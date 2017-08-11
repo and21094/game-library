@@ -158,6 +158,10 @@
 
 /*MOVIMIENTOS DE CASES*/
 
+.notransition {
+  transition: none !important;
+}
+
 /*CASE 1*/
 .move1 {
   z-index: 5;
