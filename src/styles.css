@@ -177,6 +177,12 @@ body{
 .icon-arrow-up:before {
   content: "\ea32";
 }
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
 .icon-new-tab:before {
   content: "\ea7e";
 }

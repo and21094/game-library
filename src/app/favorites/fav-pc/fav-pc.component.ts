@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FavPcComponent implements OnInit {
 
   games:any = []
+  gamesRight:any = []
   visibleTagName:boolean = true
   showModal:boolean = false
   centerGame:string = ''
@@ -133,26 +134,34 @@ export class FavPcComponent implements OnInit {
     var nine = (<HTMLInputElement>document.getElementById('nine'));
 
     moving.className = moving.className.concat(" move"+animation);
-        center.className = "five stay-left five-left";
+    center.className = "five stay-left five-left";
 
-        window.setTimeout(() =>{
-          moving.className = position+" stay"+animation
-          center.className = "notransition five"
-          this.imageFive = this.games[next].case
-          this.centerGame = this.games[next].name
-          this.visibleTagName = true;
+    window.setTimeout(() =>{
+      var tempGame = this.games[next]
+      this.games.splice(next,1)
+      moving.className = position+" stay"+animation
+      center.className = "notransition five"
+      this.visibleTagName = true;
 
-          window.setTimeout(() =>{
-            center.className = "five"
-          },100);
-          moving.className = position
+      this.gamesRight.push(this.games[0])
+      this.games.splice(0,1)
+      this.games.unshift(tempGame)
 
-        },550);
+      moving.className = position+" notransition"
 
-        this.imageSix = this.games[0].case
-        if (six.style.visibility == 'hidden') {
-          six.style.visibility = 'visible'
-        }
+      this.setStyles()
+
+      window.setTimeout(() =>{
+        center.className = "five"
+        moving.className = position
+      },100);
+    },550);
+
+    this.imageSix = this.games[0].case
+
+    if (six.style.visibility == 'hidden') {
+      six.style.visibility = 'visible'
+    }
 
   }
 
@@ -239,29 +248,82 @@ export class FavPcComponent implements OnInit {
   }
 
   setStyles(){
-    for (var i = 0; i <= this.games.length ; i++) {
-      switch (i){
-      case 0:
-        this.imageFive = this.games[i].case
-        this.centerGame = this.games[i].name
-      case 1:
-        this.imageFour = this.games[i].case
-      case 2:
-        this.imageThree = this.games[i].case
-      case 3:
-        this.imageTwo = this.games[i].case
-      case 4:
-        this.imageOne = this.games[i].case
-      // case 5:
-      //   this.imageSix = this.games[i].case
-      // case 6:
-      //   this.imageSeven = this.games[i].case
-      // case 7:
-      //   this.imageEight = this.games[i].case
-      // case 8:
-      //   this.imageNine = this.games[i].case
-      }
+
+    this.imageFive = this.games[0].case
+    this.centerGame = this.games[0].name
+
+    var box4 = (<HTMLInputElement>document.getElementById('four'))
+    var box3 = (<HTMLInputElement>document.getElementById('three'))
+    var box2 = (<HTMLInputElement>document.getElementById('two'))
+    var box1 = (<HTMLInputElement>document.getElementById('one'))
+
+    // case 4
+    if (this.games.length-1 >= 1) {
+      this.imageFour = this.games[1].case
+      box4.className = box4.className.concat(" notransition");
+      window.setTimeout(() =>{
+        box4.className = "four"
+      },100);
+    } else {
+      box4.className = 'notransition'
+      box4.style.visibility = 'hidden'
+      this.imageFour = ''
+      window.setTimeout(() =>{
+        box4.className = "four"
+      },100);
+      var rightButton = (<HTMLInputElement>document.getElementById('move-right-button'))
+      rightButton.style.pointerEvents = 'none'
+      rightButton.className = rightButton.className.concat(' selected')
     }
+
+    // case 3
+    if (this.games.length-1 >= 2) {
+      this.imageThree = this.games[2].case
+      box3.className = box3.className.concat(" notransition");
+      window.setTimeout(() =>{
+        box3.className = "three"
+      },100);
+    } else {
+      box3.className = 'notransition'
+      box3.style.visibility = 'hidden'
+      this.imageThree = ''
+      window.setTimeout(() =>{
+        box3.className = "three"
+      },100);
+    }
+
+    // case 2
+    if (this.games.length-1 >= 3) {
+      this.imageTwo = this.games[3].case
+      box2.className = box2.className.concat(" notransition");
+      window.setTimeout(() =>{
+        box2.className = "two"
+      },100);
+    } else {
+      box2.className = 'notransition'
+      box2.style.visibility = 'hidden'
+      this.imageTwo = ''
+      window.setTimeout(() =>{
+        box2.className = "two"
+      },100);
+    }
+
+    // case 1
+    if (this.games.length-1 >= 4) {
+      this.imageOne = this.games[4].case
+      box1.className = box1.className.concat(" notransition");
+      window.setTimeout(() =>{
+        box1.className = "one"
+      },100);
+    } else {
+      box1.className = 'notransition'
+      box1.style.visibility = 'hidden'
+      this.imageOne = ''
+      window.setTimeout(() =>{
+        box1.className = "one"
+      },100);
+    }
+
   }
 
 }
