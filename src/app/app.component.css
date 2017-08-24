@@ -88,16 +88,10 @@
   padding: 15px;
   overflow-y: auto;
   position: absolute;
-  min-width: 785px;
+  min-width: 1298px;
   min-height: 580px;
   top: 20px;
   left: 15px;
   right: 15px;
   bottom: 20px;
-}
-
-@media (max-width:1350px) {
-  .container {
-    text-align: center;
-  }
 }
