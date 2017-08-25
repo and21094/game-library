@@ -12,6 +12,7 @@ export class FavPcComponent implements OnInit {
   visibleTagName:boolean = true
   showModal:boolean = false
   centerGame:string = ''
+  modal:string = '../../assets/img/black-case-open.png'
   imageOne:string = ''
   imageTwo:string = ''
   imageThree:string = ''
@@ -29,47 +30,56 @@ export class FavPcComponent implements OnInit {
   	this.games = [{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/assassins-creed.png',
-			name: 'Assassin\'s Creed'
+			name: 'Assassin\'s Creed',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/battlefield-3.png',
-			name: 'Battlefield 3'
+			name: 'Battlefield 3',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/call-of-duty-black-ops.png',
-			name: 'Call of Duty Black Ops'
+			name: 'Call of Duty Black Ops',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/far-cry-3.png',
-			name: 'Far Cry 3'
+			name: 'Far Cry 3',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/grand-theft-auto-v.png',
-			name: 'Grand Theft Auto V'
+			name: 'Grand Theft Auto V',
+      modal: '../../assets/img/black-case-open-gta.png'
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/need-for-speed-shift.png',
-			name: 'Need for Speed Shift'
+			name: 'Need for Speed Shift',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/outlast.png',
-			name: 'Outlast'
+			name: 'Outlast',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/the-elder-scrolls-v-skyrim.png',
-			name: 'The Elder Scrolls V: Skyrim'
+			name: 'The Elder Scrolls V: Skyrim',
+      modal: ''
   	  	},
   	  	{
 			platform: 'pc',
 			case: '../../assets/img/cases/pc/the-witcher-3.png',
-			name: 'The Witcher 3: Wild Hunt'
+			name: 'The Witcher 3: Wild Hunt',
+      modal: ''
   	  	},
   	  	]
 
@@ -155,13 +165,41 @@ export class FavPcComponent implements OnInit {
         center.className = "five"
         moving.className = position
       },100);
+
     },550);
 
-    this.imageSix = this.games[0].case
+    this.modal = this.games[0].modal ? this.games[0].modal : this.modal
 
-    if (six.style.visibility == 'hidden') {
-      six.style.visibility = 'visible'
-    }
+    window.setTimeout(() =>{
+        this.imageSix = this.games[0].case
+
+        switch (this.gamesRight.length) {
+          case 0:
+            six.style.visibility = 'visible'
+            break;
+          case 1:
+            seven.style.visibility = 'visible'
+            this.imageSeven = this.gamesRight[0].case
+            break;
+          case 2:
+            eight.style.visibility = 'visible'
+            this.imageSeven = this.gamesRight[1].case
+            this.imageEight = this.gamesRight[0].case
+            break;
+          case 3:
+            nine.style.visibility = 'visible'
+            this.imageSeven = this.gamesRight[2].case
+            this.imageEight = this.gamesRight[1].case
+            this.imageNine = this.gamesRight[0].case
+            break;
+        }
+
+        if (this.gamesRight.length > 3) {
+            this.imageSeven = this.gamesRight[this.gamesRight.length-1].case
+            this.imageEight = this.gamesRight[this.gamesRight.length-2].case
+            this.imageNine = this.gamesRight[this.gamesRight.length-3].case
+        }
+      },100);
 
   }
 

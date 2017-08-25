@@ -1,5 +1,4 @@
 a {
-	color: white;
 	text-decoration: none;
 }
 
@@ -34,7 +33,6 @@ table {
 .file-header {
 	position: relative;
 	height: 100%;
-	color: white;
 }
 
 .file-banner {
